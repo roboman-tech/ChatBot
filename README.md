@@ -1,2 +1,2 @@
-# ChatBot
-AI Chat Project
+An intelligent AI-powered chatbot built using modern Natural Language Processing (NLP) techniques.
+This project demonstrates how to design, deploy, and interact with a conversational AI system using Python.
