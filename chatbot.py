@@ -22,7 +22,7 @@ model = AutoModelForCausalLM.from_pretrained(
 def format_prompt(user_input):
     return f"<s>[INST] {user_input.strip()} [/INST]"
 
-def chat(user_input):
+def chat(user_input: str) -> str:
     prompt = f"<s>[INST] {user_input.strip()} [/INST]"
 
     inputs = tokenizer(
@@ -58,9 +58,9 @@ def chat(user_input):
     reply = ' '.join(reply.split())
     return reply
 
-print("LLaMA-2-7B-Chat ready (no warnings)")
-while True:
-    user_input = input("You: ")
-    if user_input.lower() in ("exit", "quit"):
-        break
-    print("AI:", chat(user_input))
+#print("LLaMA-2-7B-Chat ready (no warnings)")
+#while True:
+#    user_input = input("You: ")
+#    if user_input.lower() in ("exit", "quit"):
+#        break
+#    print("AI:", chat(user_input))
